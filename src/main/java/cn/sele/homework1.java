@@ -11,12 +11,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class homework1 {
-	static WebDriver driver = null;
+	private WebDriver driver;
 	private Wait wait;
 	
 	@BeforeClass
 	public void before(){
-		Browsers browser = new Browsers(BrowsersType.firefox);
+		Browsers browser = new Browsers(BrowsersType.chrome);
 		driver = browser.driver;
 		wait = new Wait(driver);
 		driver.get("http://www.126.com");

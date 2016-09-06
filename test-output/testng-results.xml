@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="139795" started-at="2016-09-06T08:00:01Z" finished-at="2016-09-06T08:02:21Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="139795" started-at="2016-09-06T08:00:01Z" finished-at="2016-09-06T08:02:21Z">
+      <class name="cn.sele.homework1">
+        <test-method status="PASS" signature="before()[pri:0, instance:cn.sele.homework1@1b55e1e6]" name="before" is-config="true" duration-ms="85138" started-at="2016-09-06T16:00:01Z" finished-at="2016-09-06T16:01:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:cn.sele.homework1@1b55e1e6]" name="test2" duration-ms="16673" started-at="2016-09-06T16:01:26Z" finished-at="2016-09-06T16:01:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:cn.sele.homework1@1b55e1e6]" name="end" is-config="true" duration-ms="37885" started-at="2016-09-06T16:01:43Z" finished-at="2016-09-06T16:02:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- cn.sele.homework1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
