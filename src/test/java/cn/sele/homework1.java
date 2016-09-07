@@ -28,6 +28,7 @@ public class homework1 {
 		driver.findElement(By.xpath("//form[@id='login-form']/descendant::input[@data-placeholder='邮箱帐号或手机号']")).sendKeys("FireflyAutomation");
 		driver.findElement(By.xpath("//form[@id='login-form']/descendant::input[@data-placeholder='密码']")).clear();
 		driver.findElement(By.xpath("//form[@id='login-form']/descendant::input[@data-placeholder='密码']")).sendKeys("Firefly");
+		wait.waitFor(1000);
 		driver.findElement(By.xpath("//a[@id='dologin']")).click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//div[@id='cnt-box-parent']/descendant::a[text()='继续登录']")).click();
