@@ -36,18 +36,7 @@ public class homework1 {
 		driver.switchTo().defaultContent();
 	}
 	
-	//查看收件箱
-//	@Test
-//	public void test1(){
-//		
-//		driver.findElement(By.xpath("//div[@id='dvNavContainer']/descendant::div[contains(@id,'_mail')and(contains(@aria-checked,'true'))]")).click();
-//		try {
-//			Thread.sleep(5000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//			
-//		}
-//	}
+
 	
 	//查看未读
 	@Test
