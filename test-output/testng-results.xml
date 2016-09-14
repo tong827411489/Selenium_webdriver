@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="sele" duration-ms="33625" started-at="2016-09-07T02:17:00Z" finished-at="2016-09-07T02:17:34Z">
+  <suite name="Default suite" duration-ms="37193" started-at="2016-09-13T15:26:59Z" finished-at="2016-09-13T15:27:36Z">
     <groups>
     </groups>
-    <test name="homework1" duration-ms="33625" started-at="2016-09-07T02:17:00Z" finished-at="2016-09-07T02:17:34Z">
-      <class name="cn.sele.homework1">
-        <test-method status="PASS" signature="before()[pri:0, instance:cn.sele.homework1@545b2144]" name="before" is-config="true" duration-ms="27724" started-at="2016-09-07T10:17:00Z" finished-at="2016-09-07T10:17:28Z">
+    <test name="Default test" duration-ms="37193" started-at="2016-09-13T15:26:59Z" finished-at="2016-09-13T15:27:36Z">
+      <class name="com.jdtest.cn.testHomePage">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.jdtest.cn.testHomePage@2124532]" name="before" is-config="true" duration-ms="11536" started-at="2016-09-13T23:26:59Z" finished-at="2016-09-13T23:27:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:cn.sele.homework1@545b2144]" name="test2" duration-ms="3560" started-at="2016-09-07T10:17:28Z" finished-at="2016-09-07T10:17:31Z">
+        <test-method status="PASS" signature="jdpage()[pri:0, instance:com.jdtest.cn.testHomePage@2124532]" name="jdpage" duration-ms="23475" started-at="2016-09-13T23:27:11Z" finished-at="2016-09-13T23:27:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="end()[pri:0, instance:cn.sele.homework1@545b2144]" name="end" is-config="true" duration-ms="2289" started-at="2016-09-07T10:17:31Z" finished-at="2016-09-07T10:17:34Z">
+        </test-method> <!-- jdpage -->
+        <test-method status="PASS" signature="end()[pri:0, instance:com.jdtest.cn.testHomePage@2124532]" name="end" is-config="true" duration-ms="2155" started-at="2016-09-13T23:27:34Z" finished-at="2016-09-13T23:27:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- cn.sele.homework1 -->
-    </test> <!-- homework1 -->
-  </suite> <!-- sele -->
+      </class> <!-- com.jdtest.cn.testHomePage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

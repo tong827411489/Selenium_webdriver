@@ -43,12 +43,14 @@ public class homework1 {
 	public void test2(){
 		wait.waitForElementPresent("//div[@id='dvNavTree']/descendant::span[text()='收件箱']");
 		Actions actions = new Actions(driver);
+		//右击收件箱
 		actions.contextClick(driver.findElement(By.xpath("//div[@id='dvNavTree']/descendant::span[text()='收件箱']"))).build().perform();
 		
 		driver.findElement(By.xpath("//div[contains(@style,'visible')]/descendant::span[text()='查看未读']")).click();
 		String unlook = driver.findElement(By.xpath("//div[@id='dvContainer']/descendant::h1[text()='未读']")).getText();
 		Assert.assertEquals(unlook.equals("未读"), true);
 	}
+	
 	@AfterClass
 	public void end(){
 		driver.quit();

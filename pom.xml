@@ -15,7 +15,7 @@
        <version>2.10</version>
        <configuration>
          <includes>
-           <include>**/*homework1.java</include>
+           <include>**/*testHomePage.java</include>
          </includes>
          <shipTests>true</shipTests>
        </configuration>
