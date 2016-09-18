@@ -26,12 +26,14 @@ public class ResitJDpage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void zc(){
+	public ResitJDpage zc(){
 		mian.click();
+		return this;
 	}
 	
-	public void setUserId(String userid){
+	public ResitJDpage setUserId(String userid){
 		userId.sendKeys(userid);
+		return this;
 	}
 	
 	public void setPassWord(String pass){

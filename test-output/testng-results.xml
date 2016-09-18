@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37193" started-at="2016-09-13T15:26:59Z" finished-at="2016-09-13T15:27:36Z">
+  <suite name="Default suite" duration-ms="20533" started-at="2016-09-18T09:18:48Z" finished-at="2016-09-18T09:19:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37193" started-at="2016-09-13T15:26:59Z" finished-at="2016-09-13T15:27:36Z">
-      <class name="com.jdtest.cn.testHomePage">
-        <test-method status="PASS" signature="before()[pri:0, instance:com.jdtest.cn.testHomePage@2124532]" name="before" is-config="true" duration-ms="11536" started-at="2016-09-13T23:26:59Z" finished-at="2016-09-13T23:27:11Z">
+    <test name="Default test" duration-ms="20533" started-at="2016-09-18T09:18:48Z" finished-at="2016-09-18T09:19:09Z">
+      <class name="huirongTest">
+        <test-method status="PASS" signature="before()[pri:0, instance:huirongTest@3bfa3fa9]" name="before" is-config="true" duration-ms="5599" started-at="2016-09-18T17:18:48Z" finished-at="2016-09-18T17:18:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="jdpage()[pri:0, instance:com.jdtest.cn.testHomePage@2124532]" name="jdpage" duration-ms="23475" started-at="2016-09-13T23:27:11Z" finished-at="2016-09-13T23:27:34Z">
+        <test-method status="PASS" signature="test1()[pri:0, instance:huirongTest@3bfa3fa9]" name="test1" duration-ms="12278" started-at="2016-09-18T17:18:54Z" finished-at="2016-09-18T17:19:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jdpage -->
-        <test-method status="PASS" signature="end()[pri:0, instance:com.jdtest.cn.testHomePage@2124532]" name="end" is-config="true" duration-ms="2155" started-at="2016-09-13T23:27:34Z" finished-at="2016-09-13T23:27:36Z">
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:huirongTest@3bfa3fa9]" name="end" is-config="true" duration-ms="2638" started-at="2016-09-18T17:19:06Z" finished-at="2016-09-18T17:19:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- com.jdtest.cn.testHomePage -->
+      </class> <!-- huirongTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
