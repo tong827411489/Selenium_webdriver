@@ -35,8 +35,7 @@ public class Do {
 		wait.waitForElementPresent(locatename);
 	}
 	
-	
-	
+
 //	public WebElement getWebElement(String wm,String accountname){
 //		return do.what(String.format(wm, accountname));
 //	}

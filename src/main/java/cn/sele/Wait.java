@@ -1,6 +1,9 @@
 package cn.sele;
 
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
+
+import locator.HRCreateOrder;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -43,5 +46,33 @@ public class Wait {
 	
 	public void waitManage(){
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	
+	public boolean doesWebElementExist(String xpath){
+		boolean flag = false;
+		try {
+//			waitFor(2000);
+			driver.findElement(By.xpath(xpath));
+			 flag = true;
+		} catch (NoSuchElementException e) {
+			e.getMessage();
+		}
+		return flag;
+	}
+	
+	public  int getRandomNumber(int i) {
+		return (int) ((Math.random() * 10000));
+		}
+	
+	//处理单个非alert弹窗
+	public boolean testNewWindow(WebDriver driver){
+	    try{
+	        //定位窗口
+	        driver.switchTo().window(driver.getWindowHandles().iterator().next());
+	        return true;
+	    }catch(Exception e){
+	        System.out.println(e.getMessage());
+	        return false;
+	    }
 	}
 }

@@ -14,7 +14,7 @@ import cn.sele.Wait;
 import page.Registerpage;
 
 
-public class huirongTest {
+public class hrrEgisterTest {
 	
 	private WebDriver driver;
 	private Registerpage re;
