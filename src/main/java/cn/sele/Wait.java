@@ -60,8 +60,8 @@ public class Wait {
 		return flag;
 	}
 	
-	public  int getRandomNumber(int i) {
-		return (int) ((Math.random() * 10000));
+	public int getRandomNumber(int i) {
+		return (int) ((Math.random()*(9999-1000+1))+1000);
 		}
 	
 	//处理单个非alert弹窗
