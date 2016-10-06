@@ -45,7 +45,7 @@ public class hrCreateOder {
 	public hrCreateOder name(String name){
 		wait.waitFor(5000);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		String js1 = "document.getElementsByClassName('ngdialog-close')[0]";
+		String js1 = "document.getElementsByClassName('ngdialog-close')[0].click();";
 		js.executeScript(js1);
 		du.what(HRCreateOrder.name).sendKeys(name);
 		return this;

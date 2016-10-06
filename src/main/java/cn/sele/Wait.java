@@ -60,6 +60,7 @@ public class Wait {
 		return flag;
 	}
 	
+	//产生4位随机数
 	public int getRandomNumber(int i) {
 		return (int) ((Math.random()*(9999-1000+1))+1000);
 		}
