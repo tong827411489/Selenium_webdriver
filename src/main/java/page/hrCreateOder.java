@@ -34,6 +34,7 @@ public class hrCreateOder {
 	
 	public void newOder(){
 		wait.waitForElementPresent(HRCreateOrder.newOder);
+		wait.waitFor(1000);
 		du.what(HRCreateOrder.newOder).click();
 	}
 	
@@ -44,9 +45,7 @@ public class hrCreateOder {
 	
 	public hrCreateOder name(String name){
 		wait.waitFor(5000);
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		String js1 = "document.getElementsByClassName('ngdialog-close')[0].click();";
-		js.executeScript(js1);
+		wait.js("document.getElementsByClassName('ngdialog-close')[0].click();");
 		du.what(HRCreateOrder.name).sendKeys(name);
 		return this;
 	}
@@ -63,6 +62,8 @@ public class hrCreateOder {
 	
 	public void Preservation(){
 		du.what(HRCreateOrder.Preservation).click();
+		wait.waitFor(3000);
+		wait.js("document.getElementsByClassName('ngdialog-close')[0].click();");
 	}
 	
 	public void photo2(String photo1){
@@ -130,9 +131,7 @@ public class hrCreateOder {
 	}
 	
 	public hrCreateOder totalBank(String totalBank){
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		String js1 = "document.getElementsByClassName('ngdialog-content')[0];";
-		js.executeScript(js1);
+		wait.js("document.getElementsByClassName('bankselect-panel')[0];");
 		Select s = new Select(du.what(HRCreateOrder.totalBank));
 		s.selectByVisibleText("其它银行");
 		return this;

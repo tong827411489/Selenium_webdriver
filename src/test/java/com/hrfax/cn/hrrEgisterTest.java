@@ -21,8 +21,8 @@ public class hrrEgisterTest {
 	private Wait wait;
 	
 	//运行前修改两个参数
-	private String CompanyName = "环球测试五";
-	private String requestName = "李四个";
+	private String CompanyName = "环球测试六";
+	private String requestName = "李三三";
 	
 	@BeforeClass
 	public void before(){

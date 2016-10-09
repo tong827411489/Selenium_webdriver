@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import locator.HRCreateOrder;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -62,7 +63,7 @@ public class Wait {
 	
 	//产生4位随机数
 	public int getRandomNumber(int i) {
-		return (int) ((Math.random()*(9999-1000+1))+1000);
+		return (int) ((Math.random()*(8999+1))+1000);
 		}
 	
 	//处理单个非alert弹窗
@@ -75,5 +76,10 @@ public class Wait {
 	        System.out.println(e.getMessage());
 	        return false;
 	    }
+	}
+	
+	public void js(String n){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript(n);
 	}
 }

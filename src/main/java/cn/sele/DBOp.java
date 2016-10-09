@@ -11,15 +11,16 @@ public class DBOp{
 	private Statement stat = null;
 	private ResultSet rsp = null;
 	private String tablename = null;
+	private Connection conn;
 	
 	public DBOp(String tablename){
 		this.tablename = tablename;
 	}
 	
-	public void conn(){
+	public void con(String n){
 		try {
 			Class.forName("org.sqlite.JDBC");
-			Connection conn = DriverManager.getConnection("jdbc:sqlite:"+System.getProperty("user.dir")+"\\tools\\DBLogin.sqlite");
+			conn = DriverManager.getConnection("jdbc:sqlite:"+System.getProperty("user.dir")+n);
 			stat = conn.createStatement();
 		} catch (ClassNotFoundException e) {
 			// TODO: handle exception
@@ -38,6 +39,7 @@ public class DBOp{
 				Xpath = rsp.getString("Xpath");	
 			}
 			rsp.close();
+			conn.close();
 		} catch (SQLException e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -53,6 +55,7 @@ public class DBOp{
 				Css = rsp.getString("Css");
 			}
 			rsp.close();
+			conn.close();
 		} catch (SQLException e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -62,7 +65,7 @@ public class DBOp{
 	
 	public static void main(String[] args){
 		DBOp b = new DBOp("LoginPage");
-		b.conn();
+		b.con("\\tools\\DBLogin.sqlite");
 		System.out.println(b.getLocatorXpath("Login"));
 	}
 }
