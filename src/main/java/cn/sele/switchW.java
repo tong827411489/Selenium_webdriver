@@ -21,9 +21,15 @@ public class switchW {
 		String titleName;
 		for(String handle:handles){
 			titleName = driver.switchTo().window(handle).getTitle();
-			if (titleName.contains(acctualTitleName)) {
+			try {
+				if (titleName.contains(acctualTitleName)) {
+					break;
+				}
+			} catch (Exception e) {
+				System.out.printf("Window: " + titleName + " cound not found!", e.fillInStackTrace());
 				break;
 			}
+			
 		}
 	}
 	

@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import cn.sele.Browsers;
 import cn.sele.BrowsersType;
+import cn.sele.DBmysql;
 import cn.sele.Wait;
 import page.Registerpage;
 
@@ -19,8 +20,9 @@ public class hrrEgisterTest {
 	private WebDriver driver;
 	private Registerpage re;
 	private Wait wait;
+	private DBmysql db;
+	private String path = System.getProperty("user.dir");
 	
-	//运行前修改两个参数
 	private String CompanyName = "环球测试六";
 	private String requestName = "李三三";
 	
@@ -30,6 +32,7 @@ public class hrrEgisterTest {
 		driver = browser.driver;
 		wait = new Wait(driver);
 		re = new Registerpage(driver);
+		db = new DBmysql("//192.168.0.186:3306/loan2", "root", "abc#123");
 	}
 	
 	/*
@@ -55,18 +58,27 @@ public class hrrEgisterTest {
 		re.phoneAuthCode("0987654321");
 		re.checkpassword("111111q");
 		re.Registerpage();
-		re.companyLicencs("D:/11111.jpg");
+		re.companyLicencs(path+"\\tools\\111111.jpg");
 		wait.waitFor(1000);
 		re.submit();
 		re.Determine();
 		re.Determine();
 		re.success();
+		//断言是否跳转到注册成功页面
 		Assert.assertEquals(re.getWebElement(HRlocator.companyname1, CompanyName).isDisplayed(), true);
 		wait.waitFor(5000);
 	}
 	
+	/**
+	 * 关闭浏览器
+	 * 删除数据库中的值，保证脚本不用更改参数
+	 */
 	@AfterClass
 	public void end(){
 		driver.quit();
+		db.mysqlOpen();
+		db.deleteMysql("DELETE FROM company WHERE company_name = '"+CompanyName+"'");
+		db.deleteMysql("DELETE FROM pms_user WHERE USER_ACCOUNT = (SELECT phone FROM company WHERE company_name = '"+CompanyName+"')");
+		db.close();
 	}
 }

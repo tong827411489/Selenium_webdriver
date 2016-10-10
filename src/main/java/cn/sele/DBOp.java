@@ -38,8 +38,7 @@ public class DBOp{
 			while (rsp.next()) {
 				Xpath = rsp.getString("Xpath");	
 			}
-			rsp.close();
-			conn.close();
+			
 		} catch (SQLException e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -54,8 +53,7 @@ public class DBOp{
 			while (rsp.next()) {
 				Css = rsp.getString("Css");
 			}
-			rsp.close();
-			conn.close();
+		
 		} catch (SQLException e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -63,9 +61,20 @@ public class DBOp{
 		return Css;
 	}
 	
+	public void close(){
+		try {
+			rsp.close();
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	public static void main(String[] args){
-		DBOp b = new DBOp("LoginPage");
-		b.con("\\tools\\DBLogin.sqlite");
+		DBOp b = new DBOp("baiduLogin");
+		b.con("\\tools\\baiduLogin.sqlite");
 		System.out.println(b.getLocatorXpath("Login"));
+		b.close();
 	}
 }

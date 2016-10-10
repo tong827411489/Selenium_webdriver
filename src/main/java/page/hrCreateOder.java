@@ -156,9 +156,7 @@ public class hrCreateOder {
 	
 	public hrCreateOder query(String grade,String HistoricalLoan,String HistoryCreditCard,String amortized,String unCleared,String Remarks){
 		du.what(HRCreateOrder.query).click();
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		String js1 = "document.getElementsByClassName('ngdialog-content')[0];";
-		js.executeScript(js1);
+		wait.js("document.getElementsByClassName('ngdialog-content')[0];");
 		Select grade1 = new Select(du.what(HRCreateOrder.grade));
 		grade1.selectByVisibleText(grade);
 		du.what(HRCreateOrder.HistoricalLoan).sendKeys(HistoricalLoan);

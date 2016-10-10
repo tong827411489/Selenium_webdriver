@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="157303" started-at="2016-10-08T07:07:18Z" finished-at="2016-10-08T07:09:55Z">
+  <suite name="Default suite" duration-ms="38732" started-at="2016-10-10T08:57:50Z" finished-at="2016-10-10T08:58:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="157303" started-at="2016-10-08T07:07:18Z" finished-at="2016-10-08T07:09:55Z">
+    <test name="Default test" duration-ms="38732" started-at="2016-10-10T08:57:50Z" finished-at="2016-10-10T08:58:29Z">
       <class name="com.hrfax.cn.hrrEgisterTest">
-        <test-method status="PASS" signature="before()[pri:0, instance:com.hrfax.cn.hrrEgisterTest@725122f2]" name="before" is-config="true" duration-ms="6459" started-at="2016-10-08T15:07:18Z" finished-at="2016-10-08T15:07:24Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hrfax.cn.hrrEgisterTest@8c09a5d]" name="before" is-config="true" duration-ms="20197" started-at="2016-10-10T16:57:50Z" finished-at="2016-10-10T16:58:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.hrfax.cn.hrrEgisterTest@725122f2]" name="test1" duration-ms="147565" started-at="2016-10-08T15:07:24Z" finished-at="2016-10-08T15:09:52Z">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.hrfax.cn.hrrEgisterTest@8c09a5d]" name="test1" duration-ms="15334" started-at="2016-10-10T16:58:10Z" finished-at="2016-10-10T16:58:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="end()[pri:0, instance:com.hrfax.cn.hrrEgisterTest@725122f2]" name="end" is-config="true" duration-ms="3233" started-at="2016-10-08T15:09:52Z" finished-at="2016-10-08T15:09:55Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:com.hrfax.cn.hrrEgisterTest@8c09a5d]" name="end" is-config="true" duration-ms="3051" started-at="2016-10-10T16:58:26Z" finished-at="2016-10-10T16:58:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->

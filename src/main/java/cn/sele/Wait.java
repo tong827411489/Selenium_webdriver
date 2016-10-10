@@ -78,6 +78,10 @@ public class Wait {
 	    }
 	}
 	
+	/**
+	 * 封装javascript方法，操作js
+	 * @param n
+	 */
 	public void js(String n){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript(n);

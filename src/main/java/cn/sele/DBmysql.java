@@ -39,53 +39,52 @@ public class DBmysql {
 		}
 	}
 	
-	public void selectMysql(String sql){
+	public void selectMysql(String sql,String name){
 		try {
 //			Statement statement = con.createStatement();
 			 ps = con.prepareStatement(sql);
 			ResultSet res = ps.executeQuery();
 			
-			String name;
+			String name1;
 			
 			while (res.next()) {
-				name = res.getString(1);
-				String name1 = res.getString(2);
+				name1 = res.getString(name);
 				
 //				name = res.getString("company_name");
 				
-				System.out.println(name+"\t"+name1 );
+				System.out.println(name+"\t");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-		}
-		try {
-			con.close();
-			ps.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("该数据不存在");
 		}
 	}
 	
 	
 	
-	public void updateMysql(String sql){
-		PreparedStatement prs;
+	public void deleteMysql(String sql){
 		try {
 			Statement statement = con.createStatement();
-			prs = con.prepareStatement(sql);
-			prs.executeUpdate();
-			prs.close();
+			ps = con.prepareStatement(sql);
+			ps.executeUpdate();
+			System.out.println("success");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
-	public static void main(String[] args){
-		DBmysql db = new DBmysql("//192.168.0.186:3306/loan2", "root", "abc#123");
-		db.mysqlOpen();
-		db.selectMysql("select * from company where request_name = '李三三'");
-	}
+	 public void close(){
+	        try {
+	            if (con != null ){
+	            	con .close();
+	            }
+	            if (ps != null ){
+	            	ps .close();
+	            }
+	        }catch (Exception e){
+	            e.printStackTrace();
+	        }
+	    }
 }
