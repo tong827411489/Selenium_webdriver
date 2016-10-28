@@ -42,7 +42,6 @@ public class hrrEgisterTest {
 	@Test
 	public void test1(){
 		
-		
 		driver.get("http://192.168.0.186:9092");
 		
 		re.hrregister();
