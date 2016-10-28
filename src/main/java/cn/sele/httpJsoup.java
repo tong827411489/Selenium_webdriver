@@ -41,8 +41,11 @@ public class httpJsoup {
 			conn.method(Method.POST);
 			Response response = conn.execute();
 			Map<String, String> cookies = response.cookies(); 
+			//预审核
 //			Document doc = Jsoup.connect("http://192.168.0.132:8080/service/saveMaterialsOrder.html?orderNo=nfdb2016051216004108&orderStatus=1&materialsId=11").cookies(cookies).timeout(20000).get();
+			//数据化
 //			Document doc1 = Jsoup.connect("http://192.168.0.186:9092/service/saveMaterialsOrder.html?orderNo=nfdb2016101216061814&orderStatus=2&materialsId=11").cookies(cookies).timeout(20000).get();
+			//提交订单
 //			Document doc2 = Jsoup.connect("http://192.168.0.186:9092/approval/approvalConfirm.html?orderNo=nfdb2016101216061814&flowId=&deptType=1").cookies(cookies).timeout(20000).get();
 			
 			
