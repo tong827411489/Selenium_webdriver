@@ -27,6 +27,7 @@ public class Registerpage {
 	}
 	
 	public void hrregister(){
+		wait.waitForElementPresent(HRlocator.hrregister);
 		du.what(HRlocator.hrregister).click();
 	}
 	

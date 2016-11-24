@@ -3,9 +3,9 @@
 <suite name="tongyao">
     <test verbose="5" name="hrCreateOrderTest" preserve-order="true">
         <classes>
-            <class name="com.hrfax.cn.hrCreateOrderTest">
+            <class name="com.hrfax.cn.hrrEgisterTest">
                 <methods>
-                    <include name="hrCreateOrderTest"/>
+                    <include name="test1"/>
                 </methods>
             </class>
         </classes>

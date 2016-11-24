@@ -32,7 +32,7 @@ public class hrrEgisterTest {
 		driver = browser.driver;
 		wait = new Wait(driver);
 		re = new Registerpage(driver);
-		db = new DBmysql("//192.168.0.186:3306/loan2", "root", "abc#123");
+		db = new DBmysql("//192.168.0.186:3306/loan", "root", "abc#123");
 	}
 	
 	/*
