@@ -40,7 +40,7 @@ public class hrCreateOrderTest{
 //		login.account("jqrjbr1");
 //		login.password("111111");
 //		login.submit();
-//		createOder.newOder();
+		createOder.newOder();
 //		createOder.photo1(projectpath+"/tools/111111.jpg");
 //		createOder.name(name).oppositeID("33012219921121"+wait.getRandomNumber(1)).phone("1826821"+wait.getRandomNumber(1)).Preservation();
 //		wait.waitFor(5000);

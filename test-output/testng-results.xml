@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="tongyao" duration-ms="20270" started-at="2016-11-24T08:46:06Z" finished-at="2016-11-24T08:46:26Z">
+  <suite name="Default suite" duration-ms="14589" started-at="2016-11-30T06:48:33Z" finished-at="2016-11-30T06:48:48Z">
     <groups>
     </groups>
-    <test name="hrCreateOrderTest" duration-ms="20270" started-at="2016-11-24T08:46:06Z" finished-at="2016-11-24T08:46:26Z">
-      <class name="com.hrfax.cn.hrrEgisterTest">
-        <test-method status="PASS" signature="before()[pri:0, instance:com.hrfax.cn.hrrEgisterTest@7b4fc6e4]" name="before" is-config="true" duration-ms="4851" started-at="2016-11-24T16:46:06Z" finished-at="2016-11-24T16:46:11Z">
+    <test name="Default test" duration-ms="14589" started-at="2016-11-30T06:48:33Z" finished-at="2016-11-30T06:48:48Z">
+      <class name="com.hrfax.cn.hrLoginTest">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hrfax.cn.hrLoginTest@4fa3c06e]" name="before" is-config="true" duration-ms="5977" started-at="2016-11-30T14:48:33Z" finished-at="2016-11-30T14:48:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.hrfax.cn.hrrEgisterTest@7b4fc6e4]" name="test1" duration-ms="12448" started-at="2016-11-24T16:46:11Z" finished-at="2016-11-24T16:46:23Z">
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:com.hrfax.cn.hrLoginTest@4fa3c06e]" name="LoginTest" duration-ms="6304" started-at="2016-11-30T14:48:39Z" finished-at="2016-11-30T14:48:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="end()[pri:0, instance:com.hrfax.cn.hrrEgisterTest@7b4fc6e4]" name="end" is-config="true" duration-ms="2952" started-at="2016-11-24T16:46:23Z" finished-at="2016-11-24T16:46:26Z">
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="end()[pri:0, instance:com.hrfax.cn.hrLoginTest@4fa3c06e]" name="end" is-config="true" duration-ms="2283" started-at="2016-11-30T14:48:45Z" finished-at="2016-11-30T14:48:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- com.hrfax.cn.hrrEgisterTest -->
-    </test> <!-- hrCreateOrderTest -->
-  </suite> <!-- tongyao -->
+      </class> <!-- com.hrfax.cn.hrLoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

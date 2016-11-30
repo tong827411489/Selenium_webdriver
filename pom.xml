@@ -16,6 +16,7 @@
        <configuration>
          <includes>
            <include>**/*hrrEgisterTest.java</include>
+           <include>**/*hrLoginTest.java</include>
          </includes>
          <shipTests>true</shipTests>
        </configuration>
