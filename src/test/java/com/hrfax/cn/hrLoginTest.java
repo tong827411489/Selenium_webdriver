@@ -36,6 +36,7 @@ public class hrLoginTest {
 		lg.account("zrjbr1", "111111").submit();
 		lg.warning();
 		lg.showName().loginOut();
+		wait.waitFor(2000);
 		Assert.assertEquals(lg.getElement().isDisplayed(), true);
 	}
 	
