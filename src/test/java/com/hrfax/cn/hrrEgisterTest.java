@@ -20,7 +20,7 @@ public class hrrEgisterTest {
 	private WebDriver driver;
 	private Registerpage re;
 	private Wait wait;
-	private DBmysql db;
+	private DBmysql db; 
 	private String path = System.getProperty("user.dir");
 	
 	private String CompanyName = "环球测试六";
@@ -74,8 +74,11 @@ public class hrrEgisterTest {
 	 */
 	@AfterClass
 	public void end(){
+		String company_name = null;
 		driver.quit();
 		db.mysqlOpen();
+		company_name = db.selectSQL("SELECT p.`company_name` FROM company p WHERE p.`request_name`='"+requestName+"'","company_name");
+		Assert.assertEquals(company_name.equals(CompanyName), true);
 		db.deleteMysql("DELETE FROM company WHERE company_name = '"+CompanyName+"'");
 		db.deleteMysql("DELETE FROM pms_user WHERE USER_ACCOUNT = (SELECT phone FROM company WHERE company_name = '"+CompanyName+"')");
 		db.close();

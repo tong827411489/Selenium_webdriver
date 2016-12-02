@@ -24,6 +24,7 @@ public class DBmysql {
 		this.password = password;
 	}
 	
+	//连接数据库
 	public void mysqlOpen(){
 		try {
 			Class.forName(driver);
@@ -39,30 +40,26 @@ public class DBmysql {
 		}
 	}
 	
-	public void selectMysql(String sql,String name){
-		try {
-//			Statement statement = con.createStatement();
-			 ps = con.prepareStatement(sql);
-			ResultSet res = ps.executeQuery();
-			
-			String name1;
-			
-			while (res.next()) {
-				name1 = res.getString(name);
-				
-//				name = res.getString("company_name");
-				
-				System.out.println(name+"\t");
-			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			System.out.println("该数据不存在");
-		}
-	}
+	//查询数据
+	public  String selectSQL(String sql,String sqlName) { 
+			String companyName = null;
+	        ResultSet rs = null;  
+	        try {  
+	            ps = con.prepareStatement(sql);  
+	            rs = ps.executeQuery(sql);
+	            while (rs.next()) {
+	            	companyName = rs.getString(sqlName);
+					System.out.println(companyName);
+				}
+	            return companyName;
+	        } catch (SQLException e) {  
+	            e.printStackTrace();
+	            return null;
+	        }  
+	          
+	    }  
 	
-	
-	
+	//删除数据
 	public void deleteMysql(String sql){
 		try {
 			Statement statement = con.createStatement();
@@ -75,6 +72,7 @@ public class DBmysql {
 		}
 	}
 	
+	//关闭数据库连接
 	 public void close(){
 	        try {
 	            if (con != null ){
@@ -87,4 +85,6 @@ public class DBmysql {
 	            e.printStackTrace();
 	        }
 	    }
+	 
+	
 }
