@@ -96,6 +96,7 @@ public class Registerpage {
 	}
 	
 	public Registerpage Determine(){
+		wait.waitForElementPresent(HRlocator.Determine);
 		du.what(HRlocator.Determine).click();
 		return this;
 	}
